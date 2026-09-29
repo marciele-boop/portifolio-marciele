@@ -11,6 +11,7 @@ body {
     background-color: #f5f5f5;
     color: #333333;
     line-height: 1.6;
+    font-size: 16px;
 }
 
 
@@ -26,7 +27,7 @@ header {
 /* Menu */
 
 nav {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
 
     display: flex;
@@ -53,9 +54,9 @@ nav a:hover {
 /* Seções */
 
 section {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 80px 40px;
 }
 
 
@@ -70,18 +71,20 @@ section {
 }
 
 #inicio h1 {
-    font-size: 45px;
+    font-size: 52px;
     margin-bottom: 10px;
 }
 
 #inicio h2 {
+    font-size: 28px;
     color: #2563eb;
     margin-bottom: 20px;
 }
 
 #inicio p {
-    max-width: 650px;
+    max-width: 700px;
     margin-bottom: 25px;
+    font-size: 18px;
 }
 
 
@@ -256,4 +259,56 @@ footer {
 #resultado h3 {
     color: #2563eb;
     margin-bottom: 10px;
+}
+/* Apresentação com imagem */
+
+#inicio {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.inicio-texto {
+    flex: 1;
+}
+
+.inicio-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio-imagem img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Efeito suave na imagem */
+
+.inicio-imagem img {
+    transition: transform 0.3s ease;
+}
+
+.inicio-imagem img:hover {
+    transform: translateY(-8px);
+}
+
+/* Celular */
+
+@media (max-width: 768px) {
+
+    #inicio {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .inicio-imagem img {
+        max-width: 350px;
+    }
 }
